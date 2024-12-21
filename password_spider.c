@@ -113,7 +113,8 @@ void extract_top_passwords(const char *wordlist_location, const char *output_fil
         }
     }
 
-    fclose(piped_output);
+    pclose(piped_output);  
+
     for (int i = 0; i < word_count; i++) {
         free((char *)words[i]);
     }
